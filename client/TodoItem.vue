@@ -39,5 +39,7 @@ export default class TodoItem extends Vue{
 </script>
 
 <style lang="css">
+li.todo-item{ list-style: none;}
 .todo-item{ color:#ff0099;}
+.delete{ color:red;}
 </style>
