@@ -19,7 +19,8 @@ import Todo from "./todo"
     }
 })
 export default class TodoItem extends Vue{
-    //todo: Todo // TODO Fix warning
+    todo!: Todo 
+
     mounted(){
         console.log("mounted", this.todo.content)
     }
@@ -37,6 +38,6 @@ export default class TodoItem extends Vue{
 }
 </script>
 
-<style>
+<style lang="css">
 .todo-item{ color:#ff0099;}
 </style>

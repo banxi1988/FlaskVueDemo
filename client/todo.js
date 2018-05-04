@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var Todo = /** @class */ (function () {
     function Todo(content) {
         this.content = content;
@@ -13,4 +11,4 @@ var Todo = /** @class */ (function () {
     };
     return Todo;
 }());
-exports["default"] = Todo;
+export default Todo;
