@@ -3,7 +3,38 @@
   <meta charset="utf-8"/>
 </head>
 <body>
-  <div id="app"></div>
-  <script type="text/javascript" src="todoapp.bundle.js"> </script>
+  <div id="app">
+    <h1>我的待办事项列表</h1>
+    <ul id="todo-list">
+       
+    </ul>
+  </div>
+  <!-- <script type="text/javascript" src="todoapp.bundle.js"> </script> -->
+  <script type="text/javascript">
+    let todos = [{content: "学习 JS",done: false}, "学习 TypeScript"];
+    let todoListElem = document.querySelector("#todo-list");
+    for(let index = 0; index < todos.length;index++){
+      let todo = todos[index]
+      let todoItemElem = document.createElement("li")
+      let doneButtonElem = document.createElement("span")
+      if(todo.content){
+        todoItemElem.textContent =  todo.content;
+      }else{
+        todoItemElem.textContent = todo;
+      }
+      todoItemElem.setAttribute("data-index", index);
+      todoListElem.appendChild(todoItemElem);
+    }
+    let todoItem = todoListElem.querySelector("li[data-index='1']");
+    todoItem.className = "selected"
+
+    let firstTodoItem = todoListElem.querySelector(":first-child")
+    
+    firstTodoItem.setAttribute("is-first-item", "true");
+    
+  </script>
+  <style>
+    .selected{ color:red;}
+  </style>
 </body>
 </html>
